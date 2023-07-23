@@ -1,0 +1,20 @@
+{
+    "humo": {
+        "consumer":      "https://humo.tj/ru/personal/loans/potrebitelskiy-kredit/",
+	    "startBusiness": "https://humo.tj/ru/personal/loans/start-biznes/",
+	    "mortgage":      "https://humo.tj/ru/personal/loans/ipoteka/",
+	    "education":     "https://humo.tj/ru/personal/loans/kredit-takhsil/",
+	    "agricultural":  "https://humo.tj/ru/personal/loans/selskokhozyaystvennyy-kredit/",
+	    "livestock":     "https://humo.tj/ru/personal/loans/kredit-na-zhivotnovodstvo/",
+	    "orzu":          "https://orzu.humo.tj/"
+    },
+	"eskhata": {
+		"commonUrl": "https://eskhata.com/individuals/lending/lending_types/",
+		"multiPurposeConsumer": "#product-47",
+		"express": "#product-6129",
+		"hunarkhoiMardumi": "#product-4551",
+		"imkon": "#product-3320",
+		"car": "#product-2012",
+		"manzili": "#product-1549"
+	}
+}
