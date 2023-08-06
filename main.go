@@ -11,16 +11,14 @@ import (
 
 func main() {
 
-	router := mux.NewRouter().PathPrefix("/api").Subrouter()
+	router := mux.NewRouter() //.PathPrefix("/api").Subrouter()
 	router.Use(mux.CORSMethodMiddleware(router))
-	router.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
-		w.Write([]byte("Hello. For use this service using route '/getGreditBy' with parameters bank and creditType"))
-	}).Methods("GET")
+	router.HandleFunc("/", handler.Greating).Methods("GET")
 	router.HandleFunc("/getGreditBy", handler.GetGreditBy).Methods("GET")
 
 	// starting server
 	log.Println("Starting server... on ", "0.0.0.0:8080")
-	err := http.ListenAndServe("0.0.0.0:8080", router)
+	err := http.ListenAndServe(":8080", router)
 	if err != nil {
 		log.Fatal(err)
 	}

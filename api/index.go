@@ -52,3 +52,7 @@ func GetGreditBy(w http.ResponseWriter, r *http.Request) {
 		w.Write([]byte("bank not found"))
 	}
 }
+
+func Greating(w http.ResponseWriter, r *http.Request) {
+	w.Write([]byte("Hello. For use this service using route '/getGreditBy' with parameters bank and creditType"))
+}
