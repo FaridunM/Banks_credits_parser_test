@@ -1,7 +1,10 @@
 package utils
 
 import (
+	"encoding/json"
+	"fmt"
 	"log"
+	"net/http"
 	"parser_of_credits/structs"
 	"strings"
 
@@ -100,4 +103,18 @@ func PanicCatcher() {
 	if err := recover(); err != nil {
 		log.Println("panic msg -", err)
 	}
+}
+
+func WriteJson(w http.ResponseWriter, structure any) error {
+	defer PanicCatcher()
+	w.Header().Set("Content-Type", "application/json")
+
+	body, err := json.Marshal(structure)
+	if err != nil {
+		return err
+	}
+
+	fmt.Fprint(w, string(body))
+
+	return nil
 }
