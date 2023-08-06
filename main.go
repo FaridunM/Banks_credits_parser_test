@@ -14,7 +14,7 @@ import (
 
 func main() {
 
-	router := mux.NewRouter()
+	router := mux.NewRouter().PathPrefix("/api").Subrouter()
 	router.Use(mux.CORSMethodMiddleware(router))
 	router.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
 		w.Write([]byte("Hello. For use this service using route '/getGreditBy' with parameters bank and creditType"))
